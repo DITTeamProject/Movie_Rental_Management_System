@@ -17,9 +17,9 @@ git pull https://github.com/DITTeamProject/Movie_Rental_Management_System.git ma
 
 #### 4. Create new branch from master.
 ```sh
-git checkout -b new_branch_name
-# the default branch is
+# the default branch is master
 
+git checkout -b new_branch_name
 # create and switch to new branch
 
 git checkout exist_branch_name
