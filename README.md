@@ -7,15 +7,26 @@ Movie Rental Management System:
 ### Requirement
 
   * Administrator:  
+
   ![AdminUseCase](Misc/AdminUseCase.png)  
 
   * User:
+
   ![UserUseCase](Misc/UserUseCase.png)
 
 ### Model
 
+  * MVC(Model & View &Controller)
+
+  ![MVC](Misc/MVC.png)
+
   * Class Diagram:
+
   ![ClassDiagram](Misc/ClassDiagram.png)
+
+  * ERD:
+
+  ![ERD](Misc/ERD.png)
 
 
 ### File Tree
@@ -68,7 +79,6 @@ Movie Rental Management System:
 2. Clone the repo from your remote repo into local
 
   If you not clone. otherwise, skip that.
-
 
   ```sh
   git clone https://github.com/your_user_name/Movie_Rental_Management_System.git
