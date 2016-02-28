@@ -19,4 +19,4 @@ insert into Movie (Title, Genre, Price, Cover, Duration) values ('The Godfather:
 insert into Movie (Title, Genre, Price, Cover, Duration) values ('The Dark Knight', 'Action,Crime,Drama', '0.99', 'The_Dark_Knight.jpg', '2h 32min');
 insert into Movie (Title, Genre, Price, Cover, Duration) values ('Pulp Fiction', 'Crime,Drama', '0.99', 'Pulp_Fiction.jpg', '2h 34min');
 
- 
+select * from Movie;

@@ -12,9 +12,13 @@
 		}
 		
 		public function getAllMovies() {
+			unset($this->movies);
+			
 			$this->db_manager->openConnection();
 			
-			$result = $this->db_manager->query('select * from Movie');
+			$sql = 'select * from Movie';
+			
+			$result = $this->db_manager->query($sql);
 			
 			while($result->fetchInto($row)) {
 				$this->movies[] = new Movie($row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
@@ -22,6 +26,24 @@
 			
 			$this->db_manager->closeConnection();
 			
+			return $this->movies;
+		}
+		
+		public function getMoviesByTitle($title) {
+			unset($this->movies);
+			
+			$this->db_manager->openConnection();
+			
+			$sql = "select * from Movie where Title like '%$title%'";
+										
+ 			$result = $this->db_manager->query($sql);
+				
+			while($result->fetchInto($row)) {
+				$this->movies[] = new Movie($row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
+			}
+				
+			$this->db_manager->closeConnection();
+				
 			return $this->movies;
 		}
 		

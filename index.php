@@ -15,7 +15,7 @@
 	
 	$controller = new Controller($model, $action);
 	
-	$view = new View($model, $controller); 
+	$view = new View($model, $controller);
 	
 	$view->getHTMLOutputInIndex();
 ?>

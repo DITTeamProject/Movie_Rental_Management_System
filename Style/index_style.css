@@ -16,4 +16,39 @@ div.Movie {
 img.Preview {
 	width: 91px;
 	height: 134px;
+}
+
+div.Search_Bar {
+	text-align: center;	
+}
+
+input.Search {
+                border:1px solid gray;
+                border-right-width: 0px;
+                width: 500px;
+                height: 35px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                padding-left: 10px;
+                
+}
+
+input.Button {
+                position: relative;
+                left: -6px;
+                border: 1px solid blue;
+                border-left-width: 0px;
+                background-color: blue;
+                color: white;
+                width: 100px;
+                height: 35px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                
+                
+}
+
+input.Button:hover  {
+                background-color: white;
+                color: blue;
 }	
