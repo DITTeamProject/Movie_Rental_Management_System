@@ -1,3 +1,5 @@
+<!-- Show all the mvoies (Cover and Title) in a Movies class div -->
+
 <div class="Movies">
 
 <?php

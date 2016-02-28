@@ -1,7 +1,6 @@
 div.Movies {
 	overflow: hidden;
-	padding-left: 150px;
-	padding-right: 150px;
+	padding-left: 50px;
 }
 
 div.Movie {
@@ -19,36 +18,70 @@ img.Preview {
 }
 
 div.Search_Bar {
-	text-align: center;	
+	text-align: center;
+	padding: 20px;
 }
 
 input.Search {
-                border:1px solid gray;
-                border-right-width: 0px;
-                width: 500px;
-                height: 35px;
-                border-top-left-radius: 5px;
-                border-bottom-left-radius: 5px;
-                padding-left: 10px;
+    border:1px solid gray;
+    border-right-width: 0px;
+    width: 500px;
+    height: 35px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 10px;
                 
 }
 
 input.Button {
-                position: relative;
-                left: -6px;
-                border: 1px solid blue;
-                border-left-width: 0px;
-                background-color: blue;
-                color: white;
-                width: 100px;
-                height: 35px;
-                border-top-right-radius: 5px;
-                border-bottom-right-radius: 5px;
-                
-                
+    position: relative;
+    left: -6px;
+    border: 1px solid blue;
+    border-left-width: 0px;
+    background-color: blue;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;            
 }
 
 input.Button:hover  {
-                background-color: white;
-                color: blue;
-}	
+    background-color: white;
+    color: blue;
+}
+
+div.Menu {
+	float: left;
+	width: 20%;
+	height: 100%;
+	background-color: blue;
+	color: white;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+div.Login_And_Sign_Up {
+	width: 90%;
+	margin: 0 auto;
+}
+
+input.Slide_Bar_Button {
+	background-color: white;
+	color: blue;
+	width: 80px;
+	height: 30px;
+	border-radius: 5px;
+	margin: 20px;
+	float: left;
+}
+
+div.Options {
+	font-size: 1.5em;
+}
+
+span {
+	margin: 30px;
+	padding: 20px;
+}

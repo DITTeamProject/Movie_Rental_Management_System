@@ -9,19 +9,25 @@
 			
 		}
 		
+		/**
+		 * getHTMLOutputInIndex
+		 * 
+		 * Display the HTML code in index page.
+		 * 
+		 */
 		public function getHTMLOutputInIndex() {
-			if(isset($_REQUEST['search'])) {
+			if(isset($_REQUEST['search'])) {																/*if user execute search operation, call getMoivesByTitle()*/
 				
 				$movies = $this->model->getMoviesByTitle($_REQUEST['search']);
 								
 				
 			} else {
 				
-				$movies = $this->model->getAllMovies();
+				$movies = $this->model->getAllMovies();														/*Otherwise, call getAllMovies().*/
 				
 			}
 			
-			include('View/Index/index_html_template.php');
+			include('View/Index/index_html_template.php');													/*include index html framework.*/
 		}
 	}
 ?>
