@@ -4,6 +4,7 @@
 		<title>Movies</title>
 	</head>
 	<body>
+		<?php include('search_bar_template.php') ?>
 		
 		<?php include('all_movies_template.php') ?>
 		
