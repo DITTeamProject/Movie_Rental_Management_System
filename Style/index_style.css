@@ -78,10 +78,5 @@ input.Slide_Bar_Button {
 }
 
 div.Options {
-	font-size: 1.5em;
-}
-
-span {
-	margin: 30px;
-	padding: 20px;
+	color: white;
 }

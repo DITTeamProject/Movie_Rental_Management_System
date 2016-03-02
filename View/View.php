@@ -29,5 +29,14 @@
 			
 			include('View/Index/index_html_template.php');													/*include index html framework.*/
 		}
+		
+		/**
+		 * getHTMLOutputInLogin
+		 * 
+		 * Display the HTML code in login page.
+		 */
+		public function getHTMLOutputInLogin() {
+			include('View/Login/login_html_template.php');
+		}
 	}
 ?>
