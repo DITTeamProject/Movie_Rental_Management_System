@@ -1,5 +1,5 @@
 div.Block_Top {
-	height: 20%;	
+	height: 15px;	
 }
 
 div.Login {
@@ -12,25 +12,65 @@ div.Border {
 	border-radius: 10px;
 	padding: 20px;
 	opactiy: 0.5;
+	
 }
 
 table {
 	margin: 0 auto;
-	border-spacing: 20px;
+	border-spacing: 10px;
+	
 }
 
 p.Title {    
-    font-size: 200%;
+    font-size: 60px;
+	font-family : Calibri;
+	
 }
 
 
 input.Text {
-	width: 120%;
-	heigth: 120%;
-	border-radius: 5px;
-	border: 2px solid blue;
+	width: 200px;
+	border-radius: 30px;
+	border: 2px solid #80bfff;
 }
 
 input.Text:hover {
-	border: 2px solid red;
+	border: 2px solid #009900;
+}
+
+
+input.Text:focus {
+    outline-width: 0;
+}
+
+input.Button {
+	border : none !important;
+    background-color: #80bfff;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;     
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;          	
+}
+
+input.Button:hover  {
+	border : none !important;
+    background-color: #009900;
+}
+
+a:link {
+	color: #80bfff;
+	text-decoration: none;
+}
+
+a:hover {
+	color : #009900!important;
+	text-decoration : none; 
+}
+
+a:visited{
+	color : white;
+	text-decoration : none;
 }
