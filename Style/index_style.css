@@ -53,12 +53,14 @@ input.Button:hover  {
 
 div.Menu {
 	float: left;
-	width: 20%;
+	width: 250px;
 	height: 100%;
-	background-color: blue;
+	background-color: #80bfff;
 	color: white;
 	margin: 0px;
 	padding: 0px;
+	margin-left: -5px;
+	margin-top: -5px;
 	text-align: center;
 }
 
@@ -79,4 +81,19 @@ input.Slide_Bar_Button {
 
 div.Options {
 	color: white;
+}
+
+a:link {
+	color: white;
+	text-decoration: none;
+}
+
+a:hover {
+	color : #009900!important;
+	text-decoration : none; 
+}
+
+a:visited{
+	color : white;
+	text-decoration : none;
 }
