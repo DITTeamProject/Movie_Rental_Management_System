@@ -15,7 +15,7 @@
 					<form>
 						<table>
 							<tr>
-								<td>User Name: </td>
+								<td>Email: </td>
 								<td><input class="Text" type="text" name="username" /></td>
 							</tr>
 							<tr>
