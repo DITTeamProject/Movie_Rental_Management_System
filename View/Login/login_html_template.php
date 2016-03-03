@@ -9,7 +9,7 @@
 		<div class="Login">
 			<div class="Border">
 				<div class="Header">
-					<p class="Title"><font color="#80bfff">M</font>ovie <font color="#80bfff">R</font>ental <br><font color="#80bfff">S</font>ystem</p>
+					<p class="Title"><font color="#538cc6">M</font>ovie <font color="#538cc6">R</font>ental <br><font color="#538cc6">S</font>ystem</p>
 				</div>
 				<div class="Input">
 					<form>
