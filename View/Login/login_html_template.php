@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>Login</title>
-		<link rel="stylesheet" type="text/css" href="login_style.css">
+		<link rel="stylesheet" type="text/css" href="Style/login_style.css">
 	</head>
 	<body>
 		<div class="Block_Top"></div>
