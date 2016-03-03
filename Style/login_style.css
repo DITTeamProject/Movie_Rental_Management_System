@@ -31,7 +31,7 @@ p.Title {
 input.Text {
 	width: 200px;
 	border-radius: 30px;
-	border: 2px solid #80bfff;
+	border: 2px solid #538cc6;
 }
 
 input.Text:hover {
@@ -44,8 +44,8 @@ input.Text:focus {
 }
 
 input.Button {
-	border : none !important;
-    background-color: #80bfff;
+    border : none !important;
+    background-color:#538cc6;
     color: white;
     width: 100px;
     height: 35px;
@@ -61,7 +61,7 @@ input.Button:hover  {
 }
 
 a:link {
-	color: #80bfff;
+	color: #538cc6;
 	text-decoration: none;
 }
 
