@@ -1,0 +1,51 @@
+input.Text {
+	width: 200px;
+	border-radius: 30px;
+	border: 2px solid #538cc6;
+}
+
+input.Text:hover {
+	border: 2px solid #4ED50D;
+}
+
+
+input.Text:focus {
+    outline-width: 0;
+}
+
+input.Button {
+	border : none !important;
+    background-color: #538cc6;
+    color: white;
+    width: 200px;
+    height: 35px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;     
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;          	
+}
+input.Button:hover  {
+	border : none !important;
+    background-color: #4ED50D;
+}
+
+a:link {
+	color: #538cc6;
+	text-decoration: none;
+}
+
+a:hover {
+	color : #4ED50D!important;
+	text-decoration : none; 
+}
+
+a:visited{
+	color : white;
+	text-decoration : none;
+}
+
+h1 {    
+    font-size: 40px;
+	font-family : Calibri;
+	color: #538cc6;
+}
