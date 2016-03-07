@@ -23,7 +23,7 @@
 								
 								</td>
 							</tr>
-							<tr><td align="right"><font size="2px"><a href="google">Forgot Password?</a></font></td></tr>
+							<tr><td align="right"><font size="2px"><a href="retrieve_pass_html_template.php">Forgot Password?</a></font></td></tr>
 							<tr>
 								<td align="center">
 									<input class="Button" type="submit" value="Login" />
