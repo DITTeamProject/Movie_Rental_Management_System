@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>MRS - Retrieve Password </title>
-	<link rel="stylesheet" type="text/css" href="retrieve_style.css">
+	<link rel="stylesheet" type="text/css" href="Style/retrieve_style.css">
 </head>
 <body align="center">	
 	<h1>Retrieve Password</h1>
