@@ -1,6 +1,6 @@
 <?php
-	include('Class/Movie.php');
-	include('Database/DBManager.php');
+	include_once('Class/Movie.php');
+	include_once('Database/DBManager.php');
 	
 	/**
 	 * MovieDAO
