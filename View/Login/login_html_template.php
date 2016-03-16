@@ -12,7 +12,7 @@
 					<p class="Title"><font color="#538cc6">M</font>ovie <font color="#538cc6">R</font>ental <br><font color="#538cc6">S</font>ystem</p>
 				</div>
 				<div class="Input">
-					<form>
+					<form method="post" action="login.php">
 						<table>
 							<tr>								
 								<td><input class="Text" type="text" name="username" placeholder=" Email"/></td>
@@ -33,7 +33,7 @@
 							<td>
 							</tr>
 						</table>
-						
+						<input type="hidden" name="action" value="login">
 					</form>
 				</div>
 			</div>

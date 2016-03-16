@@ -36,6 +36,10 @@
 			return $this->username;
 		}
 		
+		public function getPassword() {
+			return $this->password;
+		}
+		
 		public function getEmail() {
 			return $this->email;
 		}
