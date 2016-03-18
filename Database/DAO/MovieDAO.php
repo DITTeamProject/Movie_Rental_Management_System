@@ -12,6 +12,7 @@
 		private $movies = null;
 		
 		/**
+		 * __construct
 		 * 
 		 */
 		public function __construct() {

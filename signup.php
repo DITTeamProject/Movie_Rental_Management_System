@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include_once('Model/Model.php');
 	include_once('Controller/Controller.php');
 	include_once('View/View.php');
@@ -15,6 +15,7 @@
 	$controller = new Controller($model, $action);
 
 	$view = new View($model, $controller);
-	
-	$view->getHTMLOutputInLogin();
+
+	$view->getHTMLOutputInSignUp();
+
 ?>
