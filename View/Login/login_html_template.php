@@ -25,12 +25,9 @@
 							</tr>
 							<tr><td align="right"><font size="2px"><a href="retrieve_pass_html_template.php">Forgot Password?</a></font></td></tr>
 							<tr>
-								<td align="center">
+								<td align="right">
 									<input class="Button" type="submit" value="Login" />
-									<input class="Button" type="submit" value="Register" />
-
 								</td>
-							<td>
 							</tr>
 						</table>
 						<input type="hidden" name="action" value="login">

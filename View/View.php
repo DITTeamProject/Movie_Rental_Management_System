@@ -38,5 +38,9 @@
 		public function getHTMLOutputInLogin() {
 			include('View/Login/login_html_template.php');
 		}
+		
+		public function getHTMLOutputInSignUp() {
+			include('View/Signup/signup_html_template.php');
+		}
 	}
 ?>

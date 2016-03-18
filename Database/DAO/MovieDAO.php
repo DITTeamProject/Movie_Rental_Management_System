@@ -12,11 +12,12 @@
 		private $movies = null;
 		
 		/**
+		 * __construct
 		 * 
 		 */
 		public function __construct() {
 			$this->db_manager = new DBManager();
-			$movies = array();
+			$this->movies = array();
 		}
 		
 		/**
@@ -61,7 +62,11 @@
 			$sql = "select * from Movie where Title like '%$title%'";									/*Construct SQL statement.*/
 										
  			$result = $this->db_manager->query($sql);													/*Execute SQL statement.*/
-				
+			
+ 			if(DB::isError($result)) {
+ 				die($result->getMessage());
+ 			}
+ 			
 			while($result->fetchInto($row)) {															/*Fetch movie into movies.*/
 				$this->movies[] = new Movie($row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
 			}

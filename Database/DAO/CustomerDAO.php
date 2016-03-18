@@ -26,6 +26,24 @@
 			
 			return $this->customer;
 		}
+		
+		public function insertCustomer($username, $password, $email) {
+			$this->db_manager->openConnection();
+			
+			$sql = "insert into Customer (User_Name, Password, Email) values ('$username', '$password', '$email')";
+			
+			echo $sql;
+			
+			$result = $this->db_manager->query($sql);
+			
+			if(DB::isError()) {
+				die($result->getMessage());
+			}
+			
+			$this->db_manager->closeConnection();
+			
+			return $this->getCustomerByUserName($username);
+		}
 	}
 	
 ?>
