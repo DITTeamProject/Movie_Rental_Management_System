@@ -54,9 +54,29 @@
 		 * getCustomerByUserName
 		 * 
 		 * 
+		 * @param String $username
+		 * 
+		 * @return Customer
 		 */
 		public function getCustomerByUserName($username) {
 			return $this->customer_dao->getCustomerByUserName($username);
+		}
+		
+		/**
+		 * 
+		 * insertCustomer
+		 * 
+		 * 
+		 * 
+		 * @param string $username
+		 * @param string $password
+		 * @param string $email
+		 * 
+		 * @return Customer
+		 */
+		
+		public function insertCustomer($username, $password, $email) {
+			return $this->customer_dao->insertCustomer($username, $password, $email);
 		}
 	}
 ?>

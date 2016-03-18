@@ -12,6 +12,9 @@
 				case 'logout':
 					$this->customerLogout();
 					break;
+				case 'signup':
+					$this->CustomerSignUp();
+					break;
 				default:
 					break;
 			}
@@ -42,6 +45,25 @@
 			session_start();
 			session_unset('customer');
 			session_destroy();
+		}
+		
+		public function CustomerSignUp() {
+			$username = $_REQUEST['username'];
+			$password = $_REQUEST['password'];
+			$email = $_REQUEST['email'];
+			
+			/**
+			 * 
+			 * More check for input data
+			 * 
+			 * 
+			 */
+			
+			$customer = $this->model->insertCustomer($username, $password, $email);
+			
+			session_start();
+			$_SESSION['customer'] = $customer;
+			header('Location: ./index.php');
 		}
 		
 	}
