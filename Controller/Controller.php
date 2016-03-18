@@ -9,6 +9,9 @@
 				case 'login':
 					$this->customerLogin();
 					break;
+				case 'logout':
+					$this->customerLogout();
+					break;
 				default:
 					break;
 			}
@@ -22,11 +25,23 @@
 			$customer = $this->model->getCustomerByUserName($username);
 			
 			if($customer != NULL) {
+				//login successful
 				if($customer->getPassword() == $password) {
+					session_start();
 					$_SESSION['customer'] = $customer;
+					header('Location: ./index.php');
+				//login fault
+				} else {
+					echo "Fault";
 				}
 			}
 			
+		}
+		
+		public function customerLogout() {
+			session_start();
+			session_unset('customer');
+			session_destroy();
 		}
 		
 	}
