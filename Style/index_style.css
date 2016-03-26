@@ -16,7 +16,7 @@ div#SideBar {
 	margin: 0;
 	padding: 0;
 }
-
+	
 div#Options a:link {
 	color: white;
 	text-decoration: none;
@@ -111,6 +111,16 @@ input.Button:hover  {
     color: blue;
 }
 
+div.Info_Message {
+	/*border: 1px solid black;*/
+	float: left;
+}
+
+div.Info_Cover {
+	/*border: 1px solid black;*/
+	float: left;
+}
+
 div#Movies {
 	/*border: 1px solid black;*/
 	overflow-x: hidden;
@@ -120,12 +130,27 @@ div#Movies {
 }
 
 div.Movie {
-	text-align: center;	
+	text-align: center;
 	width: 200px;
 	height: 250px;
 	padding-top: 30px;
 	float: left;
+}
+
+div.Movie div.Popup {
+	border: 1px solid black;
+	width: 200px;
+	position: relative;
+	z-index: 1;
+	display: none;
+	overflow: auto;
+	height: 270px;
+	width: 550px;
 	word-wrap: break-word;
+}
+
+div.Movie:hover div.Popup {
+	display: block;
 }
 
 img.Preview {
