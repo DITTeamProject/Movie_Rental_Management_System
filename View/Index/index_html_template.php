@@ -6,14 +6,18 @@
 		<title>Movies</title>
 	</head>
 	<body>
-		<div class="Menu">
-			<?php include('slide_bar_template.php') /*Include Slide bar*/ ?>
+		<div id="Main">
+			<div id="SideBar">
+				<?php include("View/Index/side_bar_template.php"); ?>
+			</div>
+			<div id="Content">
+				<div id="Search_Bar">
+					<?php include("View/Index/search_bar_template.php"); ?>
+				</div>
+				<div id="Movies">
+					<?php include("View/Index/all_movies_template.php"); ?>
+				</div>
+			</div>
 		</div>
-		<div>
-			<?php include('search_bar_template.php') /*Include search bar*/ ?>
-		
-			<?php include('all_movies_template.php') /*Include all movies div*/ ?>
-		</div>
-		
 	</body>
 </html>

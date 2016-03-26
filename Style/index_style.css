@@ -1,36 +1,96 @@
-div.Movies {
+div#Main {
+	/*border: 1px solid black;*/
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	clear: both;
 	overflow: hidden;
-	padding-left: 50px;
 }
 
-div.Movie {
-	text-align: center;	
-	width: 200px;
-	height: 250px;
-	padding-top: 30px;
+div#SideBar {
+	/*border: 1px solid black;*/
+	width: 20%;
+	height: 100%;
 	float: left;
-	word-wrap: break-word;
+	background-color: #538cc6;
+	margin: 0;
+	padding: 0;
 }
 
-img.Preview {
-	width: 91px;
-	height: 134px;
+div#Options a:link {
+	color: white;
+	text-decoration: none;
 }
 
-div.Search_Bar {
+div#Options a:hover {
+	color : #4ED50D!important;
+	text-decoration : none; 
+}
+
+div#Options a:visited{
+	color : white;
+	text-decoration : none;
+}
+
+
+div#Content {
+	/*border: 1px solid black;*/
+	height: 100%;
+	width: 80%;
+	float: left;
+	padding: 0;
+}
+
+div.Greeting {
+	/*border: 1px solid red;*/
+	color: white;
+}
+
+div#Options table {
+	/*border: 1px solid black;*/
+	width: 100%;
+}
+
+div#Options tr {
+	text-align: left;
+}
+
+div#Options td {
+	padding: 15px;
+	font-size: 150%;
+	font-weight: bold;
+	font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+}
+
+div#Side_Bar_Space {
+	height: 15%;
+}
+
+div#Search_Bar {
+	/*border: 1px solid black;*/
 	text-align: center;
 	padding: 20px;
 }
 
 input.Search {
-    border:1px solid gray;
+    border:1px solid blue;
     border-right-width: 0px;
     width: 500px;
     height: 35px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     padding-left: 10px;
-                
+    background-color: white;
+}
+
+input.Side_Bar_Button {
+	background-color: white;
+	color: blue;
+	width: 80px;
+	height: 30px;
+	border-radius: 5px;
+	margin: 20px;
+	float: left;
 }
 
 input.Button {
@@ -51,49 +111,24 @@ input.Button:hover  {
     color: blue;
 }
 
-div.Menu {
-	float: left;
-	width: 250px;
-	height: 100%;
-	background-color: #538cc6;
-	color: white;
-	margin: 0px;
+div#Movies {
+	/*border: 1px solid black;*/
+	overflow-x: hidden;
+	overflow-y: auto;
 	padding: 0px;
-	margin-left: -5px;
-	margin-top: -5px;
-	text-align: center;
+	margin: 0px;
 }
 
-div.Login_And_Sign_Up {
-	width: 90%;
-	margin: 0 auto;
-}
-
-input.Slide_Bar_Button {
-	background-color: white;
-	color: blue;
-	width: 80px;
-	height: 30px;
-	border-radius: 5px;
-	margin: 20px;
+div.Movie {
+	text-align: center;	
+	width: 200px;
+	height: 250px;
+	padding-top: 30px;
 	float: left;
+	word-wrap: break-word;
 }
 
-div.Options {
-	color: white;
-}
-
-a:link {
-	color: white;
-	text-decoration: none;
-}
-
-a:hover {
-	color : #4ED50D!important;
-	text-decoration : none; 
-}
-
-a:visited{
-	color : white;
-	text-decoration : none;
+img.Preview {
+	width: 91px;
+	height: 134px;
 }
