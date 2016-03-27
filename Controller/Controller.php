@@ -15,6 +15,8 @@
 				case 'signup':
 					$this->CustomerSignUp();
 					break;
+				case 'comment':
+					$this->CustomerComment();
 				default:
 					break;
 			}
@@ -64,6 +66,15 @@
 			session_start();
 			$_SESSION['customer'] = $customer;
 			header('Location: ./index.php');
+		}
+		
+		public function CustomerComment() {
+			$star = $_REQUEST['star'];
+			$content = $_REQUEST['content'];
+			$movie_id = $_REQUEST['movie_id'];
+			$customer_id = $_REQUEST['customer_id'];
+			
+			$this->model->insertNewComment($movie_id, $customer_id, $star, $content);
 		}
 		
 	}

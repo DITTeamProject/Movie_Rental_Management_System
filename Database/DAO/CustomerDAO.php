@@ -18,6 +18,10 @@
 						
 			$result = $this->db_manager->query($sql);
 			
+			if(DB::isError()) {
+				die($result->getMessage());
+			}
+			
 			if($result->fetchInto($row)) {
 				$this->customer = new Customer($row[0], $row[1], $row[2], $row[3]);
 			}
@@ -36,13 +40,33 @@
 			
 			$result = $this->db_manager->query($sql);
 			
-			if(DB::isError()) {
+			if(DB::isError($result)) {
 				die($result->getMessage());
 			}
 			
 			$this->db_manager->closeConnection();
 			
 			return $this->getCustomerByUserName($username);
+		}
+		
+		public function getCustomerByID($id) {
+			$this->db_manager->openConnection();
+			
+			$sql = "select * from Customer where User_ID = $id";
+			
+			$result = $this->db_manager->query($sql);
+			
+			if(DB::isError($result)) {
+				die($result->getMessage());
+			}
+			
+			if($result->fetchInto($row)) {
+				$this->customer = new Customer($row[0], $row[1], $row[2], $row[3]);
+			}
+							
+			$this->db_manager->closeConnection();
+			
+			return $this->customer;
 		}
 	}
 	
