@@ -7,7 +7,7 @@
 		<div class="Movie">
 			<div class="Movie_Overview">
 				<img class="Preview" src="Cover/<?= $movie->getCover() ?>" alt="<?= $movie->getTitle() ?>" />
-				<h3><a class="Movie_Title"><?= $movie->getTitle() ?></a></h3>
+				<h3><a class="Movie_Title" href="./comment.php?movie=<?= $movie->getTitle() ?>" ><?= $movie->getTitle() ?></a></h3>
 			</div>
 					
 			<div class="Popup">
@@ -23,6 +23,10 @@
 						<tr>
 							<td>Genre: </td>
 							<td><?= $movie->getGenre() ?></td>
+						</tr>
+						<tr>
+							<td>Price: </td>
+							<td><?= $movie->getPrice() ?></td>
 						</tr>
 						<tr>
 							<td>Duration: </td>

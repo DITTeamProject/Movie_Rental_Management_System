@@ -37,7 +37,20 @@
 			$result = $this->db_manager->query($sql);													/*Query.*/
 			
 			while($result->fetchInto($row)) {															/*fetch movie into movies array.*/
-				$this->movies[] = new Movie($row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
+				/**
+				  * row[0]: Movie ID
+				  * 
+				  * row[1]: Movie Title
+				  * 
+				  * row[2]: Movie Genre
+				  * 
+				  * row[3]: Movie Price
+				  * 
+				  * row[4]: Movie Cover Path
+				  * 
+				  * row[5]: Movie Duration
+				  */
+				$this->movies[] = new Movie($row[0], $row[1], $row[2], sprintf("€%.2f", $row[3]), $row[4], $row[5]);
 			}
 			
 			$this->db_manager->closeConnection();														/*Close connection to database.*/
@@ -59,7 +72,7 @@
 			
 			$this->db_manager->openConnection();														/*Open Connection.*/
 			
-			$sql = "select * from Movie where Title like '%$title%'";									/*Construct SQL statement.*/
+			$sql = "select * from Movie where Title like '$title'";										/*Construct SQL statement.*/
 										
  			$result = $this->db_manager->query($sql);													/*Execute SQL statement.*/
 			

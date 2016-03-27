@@ -51,6 +51,10 @@
 		public function getGenre() {
 			return $this->genre;
 		}
+		
+		public function getPrice() {
+			return $this->price;
+		}
 
 		public function getCover() {
 			return $this->cover;

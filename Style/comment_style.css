@@ -1,0 +1,34 @@
+div#Main {
+	/*border: 1px solid black;*/
+	height: 100%;
+	width: 100%;
+	clear: both;
+}
+
+div#Movie_Info {
+	/*border: 1px solid black;*/
+	width: 100%;
+	overflow: hidden;
+	background-color: #538cc6;	
+}
+
+div#Movie_Cover {
+	/*border: 1px solid black;*/
+	float: left;
+}
+
+div#Movie_Overview {
+	/*border: 1px solid black;*/
+	float: left;
+}
+
+table#Movie_Table th, td {
+	font-size: 200%;
+	padding: 13;
+	color: white;
+}
+
+table#Movie_Table th, td:first-of-type {
+	text-align: right;
+}
+

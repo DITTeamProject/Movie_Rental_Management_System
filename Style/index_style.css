@@ -69,6 +69,7 @@ div#Side_Bar_Space {
 div#Search_Bar {
 	/*border: 1px solid black;*/
 	text-align: center;
+	height: 10%;
 	padding: 20px;
 }
 
@@ -127,6 +128,7 @@ div#Movies {
 	overflow-y: auto;
 	padding: 0px;
 	margin: 0px;
+	height: 90%;
 }
 
 div.Movie {
