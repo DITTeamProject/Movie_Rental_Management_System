@@ -1,15 +1,23 @@
+div#Background {
+	height: 100%;
+	width: 100%;
+	clear both;
+}
+
 div#Main {
 	/*border: 1px solid black;*/
 	height: 100%;
-	width: 100%;
+	margin-left: 20%;
+	margin-right: 20%;
 	clear: both;
+	background-color: #f2f2f2;
 }
 
 div#Movie_Info {
 	/*border: 1px solid black;*/
 	width: 100%;
 	overflow: hidden;
-	background-color: #538cc6;	
+	background-color: #538cc6;
 }
 
 div#Movie_Cover {
@@ -31,4 +39,6 @@ table#Movie_Table th, td {
 table#Movie_Table th, td:first-of-type {
 	text-align: right;
 }
+
+
 

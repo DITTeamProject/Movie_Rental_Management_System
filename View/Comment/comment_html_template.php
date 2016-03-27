@@ -9,61 +9,64 @@
 				<link rel="stylesheet" type="text/css" href="Style/comment_style.css">
 			</head>
 			<body>
-				<div id="Main">
-					<div id="Movie_Info">
+				<div id="Background">
+					<div id="Main">
+						<div id="Movie_Info">
 					
-						<div id="Movie_Cover">
-							<img src="Cover/<?= $movie->getCover() ?>" alt="<?= $movie->getTitle() ?>" />
-						</div>
-						
-						<div id="Movie_Overview">
-							<table id="Movie_Table">
-								<tr>
-									<td>Title: </td>
-									<td><?= $movie->getTitle() ?></td>
-								</tr>
-								<tr>
-									<td>Genre: </td>
-									<td><?= $movie->getGenre() ?></td>
-								</tr>
-								<tr>
-									<td>Price: </td>
-									<td><?= $movie->getPrice() ?></td>
-								</tr>
-								<tr>
-									<td>Duration: </td>
-									<td><?= $movie->getDuration() ?></td>
-								</tr>
-							</table>
-						</div>
-						
-					</div>
-					
-					<div id="Comment">
-						<?php 
-							$comments = $this->model->getAllCommentsByMovieID($movie->getID());
-						
-							if(count($comments) > 0) {
-								foreach($comments as $comment) {
-						?>
-					
-							<div>
-								<div>
-									<h1>Comment</h1>
-								</div>
-							
-								<div>
-								 	<?= $comment->getContent() ?>
-								</div>
-								
+							<div id="Movie_Cover">
+								<img src="Cover/<?= $movie->getCover() ?>" alt="<?= $movie->getTitle() ?>" />
 							</div>
 						
-						<?php 
-								}
-							} 
-						?>
-					</div>
+							<div id="Movie_Overview">
+								<table id="Movie_Table">
+									<tr>
+										<td>Title: </td>
+										<td><?= $movie->getTitle() ?></td>
+									</tr>
+									<tr>
+										<td>Genre: </td>
+										<td><?= $movie->getGenre() ?></td>
+									</tr>
+									<tr>
+										<td>Price: </td>
+										<td><?= $movie->getPrice() ?></td>
+									</tr>
+									<tr>
+										<td>Duration: </td>
+										<td><?= $movie->getDuration() ?></td>
+									</tr>
+								</table>
+							</div>
+						
+						</div>
+					
+						<div id="Comment">
+							<?php 
+								$comments = $this->model->getAllCommentsByMovieID($movie->getID());
+						
+								if(count($comments) > 0) {
+									foreach($comments as $comment) {
+										$customer = $this->model->getCustomerByID($comment->getCustomerID());
+							?>
+					
+								<div>
+									<div class="Customer_Name">
+										<h1><?= $customer->getUsername() ?>: </h1>
+									</div>
+							
+									<div class="Comment_Content">
+								 		<?= $comment->getContent() ?>
+									</div>
+								
+								</div>
+						
+							<?php 
+									}
+								} 
+							?>
+						</div>
 
+					</div>
 				</div>
 			</body>
 		</html>

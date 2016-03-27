@@ -106,5 +106,17 @@
 		public function insertNewComment($movie_id, $customer_id, $star, $content) {
 			$this->comment_dao->insertNewComment($movie_id, $customer_id, $star, $content);
 		}
+		
+		/**
+		 * 
+		 * getCustomerByID
+		 * 
+		 * 
+		 * 
+		 * @param unknown $id
+		 */
+		public function getCustomerByID($id) {
+			return $this->customer_dao->getCustomerByID($id);
+		}
 	}
 ?>
