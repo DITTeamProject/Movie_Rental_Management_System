@@ -29,7 +29,7 @@
 									</tr>
 									<tr>
 										<td>Price: </td>
-										<td><?= $movie->getPrice() ?></td>
+										<td>€<?= $movie->getPrice() ?></td>
 									</tr>
 									<tr>
 										<td>Duration: </td>
@@ -49,7 +49,7 @@
 										$customer = $this->model->getCustomerByID($comment->getCustomerID());
 							?>
 					
-								<div>
+								<div class="Comment">
 									<div class="Customer_Name">
 										<h1><?= $customer->getUsername() ?>: </h1>
 									</div>
@@ -65,7 +65,35 @@
 								} 
 							?>
 						</div>
-
+			
+						<div>
+							<div>
+								<textarea id="Text_Area" name="content" form="Comment_Form">
+								</textarea>
+							</div>
+							
+							<div>
+								<select form="Comment_Form" name="star">
+									<option>0</option>
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+							
+							<div>
+								<form id="Comment_Form" method="POST" action="<?= $_SERVER['REQUEST_URI'] ?>">
+									<input type="submit" value="Comment" />
+									<input type="hidden" name="action" value="comment" />
+									<input type="hidden" name="movie_id" value="<?= $movie->getId() ?>" />
+									<input type="hidden" name="customer_id" value="<?= $_SESSION['customer']->getId() ?>" />
+								</form>
+							</div>
+							
+						</div>
+							
 					</div>
 				</div>
 			</body>

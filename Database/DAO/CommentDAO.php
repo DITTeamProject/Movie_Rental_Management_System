@@ -44,9 +44,9 @@
 		public function insertNewComment($movie_id, $customer_id, $star, $content) {
 			$this->db_manager->openConnection();
 			
-			$sql = "insert Comment (Movie_ID, Customer_ID, Star, Content) values ($movie_id, $customer_id, $star, $content)";
-			
-			$result = $this->query($sql);
+			$sql = "insert Comment (Movie_ID, Customer_ID, Star, Content) values ($movie_id, $customer_id, $star, '$content')";
+						
+			$result = $this->db_manager->query($sql);
 			
 			if(DB::isError($result)) {
 				die($result->getMessage());

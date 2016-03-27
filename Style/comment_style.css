@@ -40,5 +40,7 @@ table#Movie_Table th, td:first-of-type {
 	text-align: right;
 }
 
-
-
+div#Comment {
+	/*border: 1px solid black;*/
+	margin: 50px;
+}
