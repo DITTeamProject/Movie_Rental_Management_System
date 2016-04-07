@@ -64,5 +64,9 @@
 				include('View/Comment/comment_html_template.php');
 			}
 		}
+		
+		public function getHTMLOutputInTransaction() {			
+			include('View/Transaction/transaction_html_template.php');
+		}
 	}
 ?>
