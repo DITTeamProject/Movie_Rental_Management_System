@@ -44,3 +44,18 @@ div#Comment {
 	/*border: 1px solid black;*/
 	margin: 50px;
 }
+
+div#Rent {
+	padding: 10px;
+	width: auto;
+	height: 45px;
+	background-color: white;
+}
+
+input#Rent_Button {
+	width: 100px;
+	height: 40px;
+	background-color: #538cc6;
+	color: white;
+	float: right;
+}

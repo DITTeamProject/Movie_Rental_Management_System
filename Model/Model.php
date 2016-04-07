@@ -2,6 +2,7 @@
 	include_once('Database/DAO/MovieDAO.php');
 	include_once('Database/DAO/CustomerDAO.php');
 	include_once('Database/DAO/CommentDAO.php');
+	include_once('Database/DAO/TransactionDAO.php');
 	
 	/**
 	 * Model
@@ -12,6 +13,7 @@
 		private $movie_dao = null;
 		private $customer_dao = null;
 		private $comment_dao = null;
+		private $transaction_dao = null;
 		
 		/**
 		 * __construct
@@ -22,6 +24,7 @@
 			$this->movie_dao = new MovieDAO();
 			$this->customer_dao = new CustomerDAO();
 			$this->comment_dao = new CommentDAO();
+			$this->transaction_dao = new TransactionDAO();
 		}
 		
 		/**
@@ -117,6 +120,22 @@
 		 */
 		public function getCustomerByID($id) {
 			return $this->customer_dao->getCustomerByID($id);
+		}
+		
+		/**
+		 * 
+		 * insertNewTransaction
+		 * 
+		 * @param unknown $movie_id
+		 * @param unknown $user_id
+		 * @param unknown $cost
+		 */
+		public function insertNewTransaction($movie_id, $user_id, $cost) {
+			return $this->transaction_dao->insertNewTransaction($movie_id, $user_id, $cost);
+		}
+		
+		public function getTransactionsByUserID($user_id) {
+			return $this->transaction_dao->getTransactionsByUserID($user_id);
 		}
 	}
 ?>

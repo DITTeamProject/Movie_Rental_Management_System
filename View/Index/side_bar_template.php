@@ -55,7 +55,7 @@
 		</tr>
 		<tr>
 			<td></td>
-			<td><a href="">Transaction</a></td>
+			<td><a href="./transaction.php">Transaction</a></td>
 		</tr>
 	</table>
 </div>

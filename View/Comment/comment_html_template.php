@@ -39,6 +39,18 @@
 							</div>
 						
 						</div>
+						
+						<div id="Rent">
+							<form method="POST" action="">
+								<input id="Rent_Button" type="submit" value="Rent" />
+								<input type="hidden" name="action" value="rent" />
+								<input type="hidden" name="cost" value="<?= $movie->getPrice() ?>" />
+								<input type="hidden" name="movie_id" value="<?= $movie->getId() ?>" />
+								<input type="hidden" name="movie_title" value="<?= $movie->getTitle() ?>" />
+								<input type="hidden" name="customer_id" value="<?= $_SESSION['customer']->getId() ?>" />
+								<input type="hidden" name="customer_email" value="<?= $_SESSION['customer']->getEmail() ?>" />								
+							</form>
+						</div>
 					
 						<div id="Comment">
 							<?php 

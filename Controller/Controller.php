@@ -17,6 +17,10 @@
 					break;
 				case 'comment':
 					$this->CustomerComment();
+					break;
+				case 'rent':
+					$this->CustomerRent();
+					break;
 				default:
 					break;
 			}
@@ -75,6 +79,34 @@
 			$customer_id = $_REQUEST['customer_id'];
 			
 			$this->model->insertNewComment($movie_id, $customer_id, $star, $content);
+		}
+		
+		public function CustomerRent() {
+			//print_r($_REQUEST);
+			$movie_id = $_REQUEST['movie_id'];
+			$customer_id = $_REQUEST['customer_id'];
+			$cost = $_REQUEST['cost'];
+			
+			$transaction = $this->model->insertNewTransaction($movie_id, $customer_id, $cost);
+			
+			/* sent the mail to user block start */
+			
+			/*$to = $_REQUEST['customer_email'];
+			$subject = "Bill From Movie Rental System";
+			$message = "Hello";
+			$headers = "MIME-Version: 1.0" . "\r\n";
+			$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+						
+			$res = mail($to, $subject, $message);
+			
+			if($res) {
+				echo "Successful";
+			} else {
+				echo "Fail";
+			}*/
+						
+			/* sent the mail to user block end */
+			
 		}
 		
 	}
