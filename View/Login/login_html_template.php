@@ -25,7 +25,8 @@
 							</tr>
 							<tr><td align="right"><font size="2px"><a href="retrieve_pass_html_template.php">Forgot Password?</a></font></td></tr>
 							<tr>
-								<td align="right">
+								<td align="center">
+									<a href="singup_html_template.html"><input class="Button" type="button" value="Register" /></a>
 									<input class="Button" type="submit" value="Login" />
 								</td>
 							</tr>
