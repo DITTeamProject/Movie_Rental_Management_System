@@ -15,7 +15,7 @@
 					<form method="post" action="login.php">
 						<table>
 							<tr>								
-								<td><input class="Text" type="text" name="username" placeholder=" Email"/></td>
+								<td><input class="Text" type="text" name="username" placeholder=" Username"/></td>
 							</tr>
 							<tr>
 								<td><input class="Text" type="password" name="password" placeholder=" Password"/>
