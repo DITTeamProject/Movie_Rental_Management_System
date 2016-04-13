@@ -16,7 +16,7 @@ div#SideBar {
 	margin: 0;
 	padding: 0;
 }
-	
+
 div#Options a:link {
 	color: white;
 	text-decoration: none;
@@ -24,7 +24,7 @@ div#Options a:link {
 
 div#Options a:hover {
 	color : #4ED50D!important;
-	text-decoration : none; 
+	text-decoration : none;
 }
 
 div#Options a:visited{
@@ -104,7 +104,7 @@ input.Button {
     width: 100px;
     height: 35px;
     border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;            
+    border-bottom-right-radius: 5px;
 }
 
 input.Button:hover  {
@@ -137,6 +137,11 @@ div.Movie {
 	height: 250px;
 	padding-top: 30px;
 	float: left;
+	text-decoration: none;
+}
+
+div.Movie:visited{
+	color:  #538cc6;
 }
 
 div.Movie div.Popup {
@@ -148,6 +153,7 @@ div.Movie div.Popup {
 	overflow: auto;
 	height: 270px;
 	width: 550px;
+
 	word-wrap: break-word;
 }
 

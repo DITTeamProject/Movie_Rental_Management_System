@@ -35,8 +35,8 @@ create table Transaction (
 	Transaction_ID int primary key auto_increment,
 	Movie_ID int references Movie(Movie_ID),
 	Customer_ID int references Customer(User_ID),
-	Rental_Date datetime not null default now(),
-    Return_Date datetime not null,
+	Rental_Date timestamp not null default now(),
+    Return_Date timestamp not null,
 	Cost float
 );
 
