@@ -7,6 +7,7 @@ div#Main {
 	overflow: hidden;
 }
 
+
 div#SideBar {
 	/*border: 1px solid black;*/
 	width: 20%;
@@ -15,6 +16,7 @@ div#SideBar {
 	background-color: #538cc6;
 	margin: 0;
 	padding: 0;
+	z-index:1;
 }
 	
 div#Options a:link {
@@ -32,34 +34,71 @@ div#Options a:visited{
 	text-decoration : none;
 }
 
+a:link {
+	color: #538cc6;
+	text-decoration: none;
+}
+
+a:hover {
+	color : #4ED50D!important;
+	text-decoration : none; 
+}
+
+a:visited{
+	color : #538cc6;
+	text-decoration : none;
+}
+
 
 div#Content {
-	/*border: 1px solid black;*/
-	height: 100%;
+	height: 95%;
 	width: 80%;
 	float: left;
 	padding: 0;
 }
 
+div#Content table {
+	table-layout: fixed;
+}
+
+div#Content td {
+
+	word-wrap:break-word
+}
+
 div.Greeting {
-	/*border: 1px solid red;*/
+
 	color: white;
+	align: right;
 }
 
-div#Options table {
-	/*border: 1px solid black;*/
+div.Greeting table{
+
 	width: 100%;
+	text-align: center;
+	padding: 10px;
+}
+div.Greeting td{
+
+	text-align: center;
 }
 
-div#Options tr {
-	text-align: left;
+
+div#Options table{
+	align: center;
+
+	widht: 100%;
+	heigth: 100%;
 }
+
 
 div#Options td {
+	
 	padding: 15px;
 	font-size: 150%;
 	font-weight: bold;
 	font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+	
 }
 
 div#Side_Bar_Space {
@@ -68,26 +107,32 @@ div#Side_Bar_Space {
 
 div#Search_Bar {
 	/*border: 1px solid black;*/
-	text-align: center;
-	height: 10%;
+	text-align: left;
+	height: 35%;
 	padding: 20px;
+	padding-bottom: 2px;
+}
+
+h1{
+	padding-top: 5px;
 }
 
 input.Search {
-    border:1px solid blue;
+    border:1px solid #538cc6;
     border-right-width: 0px;
     width: 500px;
-    height: 35px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    height: 25px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
     padding-left: 10px;
     background-color: white;
+    outline-width: 0px;
 }
 
 input.Side_Bar_Button {
 	background-color: white;
 	color: blue;
-	width: 80px;
+	width: wrap-content;
 	height: 30px;
 	border-radius: 5px;
 	margin: 20px;
@@ -97,19 +142,20 @@ input.Side_Bar_Button {
 input.Button {
     position: relative;
     left: -6px;
-    border: 1px solid blue;
+    border: 1px solid #7aa7d3;
     border-left-width: 0px;
-    background-color: blue;
+    background-color: #7aa7d3;
     color: white;
     width: 100px;
-    height: 35px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;            
+    height: 25px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;            
 }
 
 input.Button:hover  {
-    background-color: white;
-    color: blue;
+    background-color: #4ED50D!important;
+    color: white!important;;
+    border : none !important;
 }
 
 div.Info_Message {
@@ -129,6 +175,7 @@ div#Movies {
 	padding: 0px;
 	margin: 0px;
 	height: 90%;
+	border-top: 1px solid #538cc6;
 }
 
 div.Movie {
@@ -137,11 +184,13 @@ div.Movie {
 	height: 250px;
 	padding-top: 30px;
 	float: left;
+	
 }
 
 div.Movie div.Popup {
 	border: 1px solid black;
 	width: 200px;
+	background: white;
 	position: relative;
 	z-index: 1;
 	display: none;
@@ -153,6 +202,7 @@ div.Movie div.Popup {
 
 div.Movie:hover div.Popup {
 	display: block;
+	position: relative;
 }
 
 img.Preview {

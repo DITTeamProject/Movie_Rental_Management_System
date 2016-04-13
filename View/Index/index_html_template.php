@@ -11,9 +11,20 @@
 				<?php include("View/Index/side_bar_template.php"); ?>
 			</div>
 			<div id="Content">
-				<div id="Search_Bar">
-					<?php include("View/Index/search_bar_template.php"); ?>
-				</div>
+				<table>
+					<tr>
+						<td>
+							<h1>&nbsp &nbsp<font color="#538cc6">M</font>ovie <font color="#538cc6">R</font>ental<font color="#538cc6"> S</font>ystem</h1>		
+						</td>
+					</tr>
+					<tr>
+						<td align="left">
+							<div id="Search_Bar">
+							<?php include("View/Index/search_bar_template.php"); ?>
+							</div>
+						</td>
+					</tr>
+				</table>
 				<div id="Movies">
 					<?php include("View/Index/all_movies_template.php"); ?>
 				</div>

@@ -50,7 +50,7 @@
 				  * 
 				  * row[5]: Movie Duration
 				  */
-				$this->movies[] = new Movie($row[0], $row[1], $row[2], sprintf("€%.2f", $row[3]), $row[4], $row[5]);
+				$this->movies[] = new Movie($row[0], $row[1], $row[2], sprintf("%.2f", $row[3]), $row[4], $row[5]);
 			}
 			
 			$this->db_manager->closeConnection();														/*Close connection to database.*/

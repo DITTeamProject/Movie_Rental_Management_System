@@ -9,40 +9,38 @@
 				<link rel="stylesheet" type="text/css" href="Style/comment_style.css">
 			</head>
 			<body>
-				<div id="Background">
-					<div id="Main">
-						<div id="Movie_Info">
-					
-							<div id="Movie_Cover">
-								<img src="Cover/<?= $movie->getCover() ?>" alt="<?= $movie->getTitle() ?>" />
-							</div>
-						
-							<div id="Movie_Overview">
+					<div id="SideBar">
+							<?php include("View/side_bar_template.php"); ?>
+						</div>
+						<div class="Content">
+						<div class="ContentCover">
+						<img src="Cover/<?= $movie->getCover() ?>" alt="<?= $movie->getTitle() ?>" />
+						</div>							
+							<div class="ContentText">
 								<table id="Movie_Table">
 									<tr>
-										<td>Title: </td>
-										<td><?= $movie->getTitle() ?></td>
+										<td><b><font size="5px"><?= $movie->getTitle() ?></font></b></td>
 									</tr>
 									<tr>
-										<td>Genre: </td>
 										<td><?= $movie->getGenre() ?></td>
 									</tr>
 									<tr>
-										<td>Price: </td>
-										<td>â‚¬<?= $movie->getPrice() ?></td>
+										<td>€<?= $movie->getPrice() ?></td>
 									</tr>
 									<tr>
-										<td>Duration: </td>
 										<td><?= $movie->getDuration() ?></td>
 									</tr>
 								</table>
 							</div>
+								
 						
+					
+						<div class="BackB">						
+						<a href="./index.php"><input class="Button2" type="button" value="Back" /></a>
 						</div>
-						
-						<div id="Rent">
-							<form method="POST" action="">
-								<input id="Rent_Button" type="submit" value="Rent" />
+						<div class=RentB>			
+								<form method="POST" action="">
+								<input class="Button" type="submit" value="Rent" />
 								<input type="hidden" name="action" value="rent" />
 								<input type="hidden" name="cost" value="<?= $movie->getPrice() ?>" />
 								<input type="hidden" name="movie_id" value="<?= $movie->getId() ?>" />
@@ -50,10 +48,14 @@
 								<input type="hidden" name="customer_id" value="<?= $_SESSION['customer']->getId() ?>" />
 								<input type="hidden" name="customer_email" value="<?= $_SESSION['customer']->getEmail() ?>" />								
 							</form>
+						
+						
 						</div>
-					
-						<div id="Comment">
-							<?php 
+				</div>
+						
+					<div class="Comment_Block">
+						<div class="Comments">
+					<?php 
 								$comments = $this->model->getAllCommentsByMovieID($movie->getID());
 						
 								if(count($comments) > 0) {
@@ -61,30 +63,20 @@
 										$customer = $this->model->getCustomerByID($comment->getCustomerID());
 							?>
 					
-								<div class="Comment">
-									<div class="Customer_Name">
-										<h1><?= $customer->getUsername() ?>: </h1>
-									</div>
 							
-									<div class="Comment_Content">
-								 		<?= $comment->getContent() ?>
-									</div>
-								
-								</div>
-						
+										<div class="Comment_User"><?= $customer->getUsername() ?>:</div>
+											<div class="Comment_Content">&nbsp&nbsp<?= $comment->getContent() ?></div>						
+								 		
+															
 							<?php 
 									}
 								} 
 							?>
-						</div>
-			
-						<div>
-							<div>
-								<textarea id="Text_Area" name="content" form="Comment_Form">
-								</textarea>
 							</div>
+						<div class="Comment_Space">
+								<textarea id="Text_Area" name="content" form="Comment_Form" rows="4" cols="50" placeholder="Add a Comment and Rate the movie..."></textarea>
+								
 							
-							<div>
 								<select form="Comment_Form" name="star">
 									<option>0</option>
 									<option>1</option>
@@ -93,9 +85,7 @@
 									<option>4</option>
 									<option>5</option>
 								</select>
-							</div>
 							
-							<div>
 								<form id="Comment_Form" method="POST" action="<?= $_SERVER['REQUEST_URI'] ?>">
 									<input type="submit" value="Comment" />
 									<input type="hidden" name="action" value="comment" />
@@ -103,11 +93,12 @@
 									<input type="hidden" name="customer_id" value="<?= $_SESSION['customer']->getId() ?>" />
 								</form>
 							</div>
-							
-						</div>
-							
+					
+					
+					
+					
+					
 					</div>
-				</div>
 			</body>
 		</html>
 <?php
