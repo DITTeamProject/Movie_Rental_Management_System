@@ -28,8 +28,8 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="right">
-									<a href="View/Login/login_html_template.php"><input class="Button2" type="button" value="Back" /></a>
+								<td align="center">
+									<a href="./login.php"><input class="Button2" type="button" value="Back" /></a>
 									<input class="Button" type="submit" value="Register" />
 								</td>
 							</tr>
