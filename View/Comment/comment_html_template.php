@@ -25,7 +25,7 @@
 										<td><?= $movie->getGenre() ?></td>
 									</tr>
 									<tr>
-										<td>€<?= $movie->getPrice() ?></td>
+										<td>â‚¬<?= $movie->getPrice() ?></td>
 									</tr>
 									<tr>
 										<td><?= $movie->getDuration() ?></td>
@@ -64,7 +64,7 @@
 							?>
 					
 							
-										<div class="Comment_User"><?= $customer->getUsername() ?>:</div>
+										<div class="Comment_User"><?= $customer->getUsername() ?> (<?= $comment->getStar() ?>) :</div>
 											<div class="Comment_Content">&nbsp&nbsp<?= $comment->getContent() ?></div>						
 								 		
 															
