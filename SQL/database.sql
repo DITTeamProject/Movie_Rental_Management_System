@@ -1,3 +1,5 @@
+create database movie_rental;
+
 use movie_rental;
 
 show tables;
@@ -35,8 +37,8 @@ create table Transaction (
 	Transaction_ID int primary key auto_increment,
 	Movie_ID int references Movie(Movie_ID),
 	Customer_ID int references Customer(User_ID),
-	Rental_Date timestamp not null default now(),
-    Return_Date timestamp not null,
+	Rental_Date datetime not null default now(),
+    Return_Date datetime not null,
 	Cost float
 );
 
@@ -57,3 +59,7 @@ insert into Transaction (Movie_ID, Customer_ID, Return_Date, Cost) values (1, 1,
 select * from Movie;
 select * from Transaction;
 select * from Customer;
+
+select * from Transaction where Movie_ID = 1 and Customer_id = 2;
+
+delete from Transaction;

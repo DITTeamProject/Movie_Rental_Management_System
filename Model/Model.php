@@ -126,9 +126,9 @@
 		 * 
 		 * insertNewTransaction
 		 * 
-		 * @param unknown $movie_id
-		 * @param unknown $user_id
-		 * @param unknown $cost
+		 * @param int $movie_id
+		 * @param int $user_id
+		 * @param float $cost
 		 */
 		public function insertNewTransaction($movie_id, $user_id, $cost) {
 			return $this->transaction_dao->insertNewTransaction($movie_id, $user_id, $cost);
