@@ -28,7 +28,8 @@
 								</td>
 							</tr>
 							<tr>
-								<td align="right">
+								<td align="center">
+									<a href="./login.php"><input class="Button2" type="button" value="Back" /></a>
 									<input class="Button" type="submit" value="Register" />
 								</td>
 							</tr>

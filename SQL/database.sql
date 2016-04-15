@@ -1,5 +1,3 @@
-create database movie_rental;
-
 use movie_rental;
 
 show tables;
@@ -42,12 +40,22 @@ create table Transaction (
 	Cost float
 );
 
-insert into Movie (Title, Genre, Price, Cover, Duration) values ('Once', 'Drama,Musical,Romance', '0.99', 'Once.jpg', '1h 25min');
-insert into Movie (Title, Genre, Price, Cover, Duration) values ('The Shawshank Redemption', 'Crime,Drama', '0.99', 'The_Shawshank_Redemption.jpg', '2h 22min');
-insert into Movie (Title, Genre, Price, Cover, Duration) values ('The Godfather', 'Crime,Drama', '0.99', 'The_Godfather.jpg', '2h 55min');
-insert into Movie (Title, Genre, Price, Cover, Duration) values ('The Godfather: Part II', 'Crime,Drama', '0.99', 'The_Godfather:PartII.jpg', '2h 22min');
-insert into Movie (Title, Genre, Price, Cover, Duration) values ('The Dark Knight', 'Action,Crime,Drama', '0.99', 'The_Dark_Knight.jpg', '2h 32min');
-insert into Movie (Title, Genre, Price, Cover, Duration) values ('Pulp Fiction', 'Crime,Drama', '0.99', 'Pulp_Fiction.jpg', '2h 34min');
+insert into Movie (Title, Genre, Price, Cover, Duration) values ('Once', 'Drama, Musical, Romance.', '0.99', 'Once.jpg', '1h 25min');
+insert into Movie (Title, Genre, Price, Cover, Duration) values ('The Shawshank Redemption', 'Crime, Drama.', '0.99', 'The_Shawshank_Redemption.jpg', '2h 22min');
+insert into Movie (Title, Genre, Price, Cover, Duration) values ('The Godfather', 'Crime, Drama.', '0.99', 'The_Godfather.jpg', '2h 55min');
+insert into Movie (Title, Genre, Price, Cover, Duration) values ('The Godfather: Part II', 'Crime, Drama.', '0.99', 'The_Godfather_PartII.jpg', '2h 22min');
+insert into Movie (Title, Genre, Price, Cover, Duration) values ('The Dark Knight', 'Action, Crime, Drama.', '0.99', 'The_Dark_Knight.jpg', '2h 32min');
+insert into Movie (Title, Genre, Price, Cover, Duration) values ('Pulp Fiction', 'Crime, Drama.', '0.99', 'Pulp_Fiction.jpg', '2h 34min');
+
+insert into Movie (Title, Genre, Price, Cover, Duration) values ('Donnie Darko', 'Drama, Sci-Fi, Thriller.', '1.50', 'Donnie_Darko.jpg', '1h 53min');
+insert into Movie (Title, Genre, Price, Cover, Duration) values ('Interstellar', 'Adventure, Drama, Sci-Fi.', '0.99', 'Interstellar.jpg', '2h 49min');
+insert into Movie (Title, Genre, Price, Cover, Duration) values ('Trainspotting', 'Drama.', '0.99', 'Trainspotting.jpg', '1h 34min');
+insert into Movie (Title, Genre, Price, Cover, Duration) values ('American History X', 'Crime, Drama.', '0.99', 'American_History_X.jpg', '1h 59min');
+insert into Movie (Title, Genre, Price, Cover, Duration) values ('The Departed', 'Crima, Drama, Thriller.', '0.99', 'The_Departed.jpg', '2h 31min');
+
+
+UPDATE Movie SET Cover = 'The_Godfather_PartII.jpg' WHERE Movie_ID = 4;
+SELECT * FROM Movie;
 
 insert into Customer (User_Name, Password, Email) values ('James', '123456', 'jamesxu182@gmail.com');
 

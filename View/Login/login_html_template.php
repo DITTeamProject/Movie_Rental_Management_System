@@ -15,7 +15,7 @@
 					<form method="post" action="login.php">
 						<table>
 							<tr>								
-								<td><input class="Text" type="text" name="username" placeholder=" Email"/></td>
+								<td><input class="Text" type="text" name="username" placeholder=" Username"/></td>
 							</tr>
 							<tr>
 								<td><input class="Text" type="password" name="password" placeholder=" Password"/>
@@ -25,7 +25,8 @@
 							</tr>
 							<tr><td align="right"><font size="2px"><a href="retrieve_pass_html_template.php">Forgot Password?</a></font></td></tr>
 							<tr>
-								<td align="right">
+								<td align="center">
+									<a href="./signup.php"><input class="Button" type="button" value="Register" /></a>
 									<input class="Button" type="submit" value="Login" />
 								</td>
 							</tr>
