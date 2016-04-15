@@ -56,7 +56,7 @@ div#Options td {
 	font-size: 150%;
 	font-weight: bold;
 	font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
-	text-align: center;
+	text-align: left;
 }
 	
 div#Options a:link {
@@ -213,4 +213,39 @@ input.Button2 {
 
 input.Button2:hover {
     background-color: #e6e6e6;
+}
+
+
+/*  
+    Recommeded CSS
+    ==============
+*/
+
+.panel {
+    position: fixed;
+    left: -15.625em; /*or width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+}
+
+/*  
+    Demo Specific Styles
+    ====================
+*/
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #101820;
+    line-height: 1.5;
+}
+
+.wrap {
+    position: relative;
+}
+
+.panel {
+    background: #101820;
+}
+
+.panel a {
+    color: #fff;
 }

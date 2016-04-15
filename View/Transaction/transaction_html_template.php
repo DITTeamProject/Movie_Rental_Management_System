@@ -12,9 +12,13 @@
 			<link rel="stylesheet" type="text/css" href="Style/transaction_style.css">
 		</head>
 		<body>
-			<div id="Main">
-				<div id="SideBar">
-					<?php include("View/side_bar_template.php"); ?>
+			<nav id="menu" class="panel" role="navigation">
+        		<?php include("side_bar_template.php"); ?>
+    		</nav>
+    		
+			<div id="Main" class="wrap push">
+				<div id="Id_Button">
+					<a href="#menu" class="menu-link">&#9776;</a>
 				</div>
 				
 				<div class="Transactions">
@@ -25,7 +29,7 @@
 								<td>Movie</td>
 								<td>Rental Date</td>
 								<td>Reture Date</td>
-								<td>Cost (€)</td>
+								<td>Cost (&euro;)</td>
 							</tr>
 							<?php
 								if($transactions != null) {
@@ -47,7 +51,15 @@
 						</div>
 					</div>	
 			</div>
-			
+		
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    		<script src="./bigSlide.js"></script>
+    		<script>
+        		$(document).ready(function() {
+            		$('.menu-link').bigSlide();
+        		});
+    		</script>
+    		
 		</body>
 	</html>
 <?php

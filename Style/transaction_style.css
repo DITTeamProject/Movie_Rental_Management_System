@@ -2,7 +2,6 @@ div#Main {
 	/*border: 1px solid black;*/
 	width: 100%;	
 	margin: 0;
-	clear: both;
 	overflow: hidden;
 }
 div#SideBar {
@@ -45,7 +44,7 @@ div#Options table {
 	/*border: 1px solid black;*/
 	padding-top: 80px;
 	width: 100%;
-	align: center;
+	align: left;
 }
 
 
@@ -55,7 +54,7 @@ div#Options td {
 	font-size: 150%;
 	font-weight: bold;
 	font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
-	text-align: center;
+	text-align: left;
 }
 	
 div#Options a:link {
@@ -125,3 +124,36 @@ div.Transaction_Table td{
 }
 
 
+/*  
+    Recommeded CSS
+    ==============
+*/
+
+.panel {
+    position: fixed;
+    left: -15.625em; /*or width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+}
+
+/*  
+    Demo Specific Styles
+    ====================
+*/
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #101820;
+    line-height: 1.5;
+}
+
+.wrap {
+    position: relative;
+}
+
+.panel {
+    background: #101820;
+}
+
+.panel a {
+    color: #fff;
+}
