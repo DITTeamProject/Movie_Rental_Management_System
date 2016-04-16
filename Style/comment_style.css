@@ -1,3 +1,7 @@
+body {
+	position: fixed;
+}
+
 div#Main {
 	/*border: 1px solid black;*/
 	width: 100%;
@@ -56,7 +60,7 @@ div#Options td {
 	font-size: 150%;
 	font-weight: bold;
 	font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
-	text-align: left;
+	text-align: center;
 }
 	
 div#Options a:link {
@@ -100,11 +104,10 @@ input.Side_Bar_Button {
 }
 
 .Comment_Block{
-	position: relative;
-	float: right;
-		
+	position: fixed;
+	right: 0;		
 	width: 30%;
-	height: 100%;
+	height: 95%;
 	border-left: 1px solid #538cc6;
 	margin: 0 auto;
 }
@@ -139,7 +142,7 @@ input.Side_Bar_Button {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	margin-bottom: 0px;
+	margin-bottom: 10px;
 	background: white;
 	
 }
@@ -147,14 +150,12 @@ input.Side_Bar_Button {
 
 .Content{
 	position: fixed;
-	background: white;
-	width: 48%;
+	background: white;	
 	height: 100%;
 	float: left;
-	align: center;
-	margin-left: 21%;
-	margin-top: 10px;
-	
+	align: left;
+	margin-left: 5%;
+	margin-top: 10px;	
 }
 
 .ContentCover{
@@ -165,18 +166,24 @@ input.Side_Bar_Button {
 	float:left;
 }
 
+.ContentText table{
+	
+	margin-left: 10px;
+}
+
 .BackB{
 	position: fixed;
 	bottom: 0;
-	left: 0;
-	margin-left: 21%;
+	margin-left: -2%;
 	margin-bottom: 1%;
+	z-index: 5;
 }
 .RentB{
 	position: fixed;
 	bottom: 0;
 	right: 0;
-	margin-right: 31%;
+	margin-right: 35%;
+	z-index: 5;	
 }
 
 
@@ -243,8 +250,12 @@ body {
 }
 
 .panel {
-    background: #101820;
+    background: #538cc6;
+    z-index: 5;
+    text-align: center;
+    align: center;
 }
+
 
 .panel a {
     color: #fff;

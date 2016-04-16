@@ -1,3 +1,4 @@
+
 <?php
 	//if user login
 	session_start();
@@ -26,16 +27,17 @@
 						<div class="ContentText">
 							<table id="Movie_Table">
 								<tr>
-									<td><b><font size="5px"><?= $movie->getTitle() ?></font></b></td>
+									<td>&nbsp&nbsp<b><font size="7px"><?= $movie->getTitle() ?></font></b></td>
 								</tr>
 								<tr>
-									<td><?= $movie->getGenre() ?></td>
+									<td><i><?= $movie->getGenre() ?></i></td>
 								</tr>
-								<tr>
-									<td>&euro;<?= $movie->getPrice() ?></td>
-								</tr>
+								
 								<tr>
 									<td><?= $movie->getDuration() ?></td>
+								</tr>
+								<tr>
+									<td><br><b>&euro;<?= $movie->getPrice() ?></b></td>
 								</tr>
 							</table>
 						</div>

@@ -54,7 +54,7 @@ div#Options td {
 	font-size: 150%;
 	font-weight: bold;
 	font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
-	text-align: left;
+	text-align: center;
 }
 	
 div#Options a:link {
@@ -98,11 +98,12 @@ input.Side_Bar_Button {
 }
 
 .Transactions{
-	position: fixed;
+	position: relative;
 	float: left;
 	height: 98%;
 	width: 100%;
 	overflow: auto;
+	margin-left: 30px;
 }
 
 div.Transaction_Table table{
@@ -150,9 +151,32 @@ body {
 }
 
 .panel {
-    background: #101820;
+    background: #538cc6;
+    z-index: 5;
+    text-align: center;
+    align: center;
 }
+
 
 .panel a {
     color: #fff;
+}
+
+input.Play_B{
+	
+    border : none !important;
+    background-color:#538cc6;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;     
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;          	
+}
+
+input.Play_B:hover  {
+	border : none !important;
+    background-color: #4ED50D;
+}
 }

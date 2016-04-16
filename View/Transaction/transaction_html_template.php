@@ -45,7 +45,7 @@
 										<td><?= $transaction->getCost() ?></td>
 										<td>
 											<form method="POST" action="play.php">
-												<input type="submit" value="Play"  />
+												<input class="Play_B" type="submit" value="Play"  />
 												<input type="hidden" name="title" value="<?= $movie->getTitle() ?>" />
 												<input type="hidden" name="url" value="<?= $movie->getURL() ?>" />
 											</form>

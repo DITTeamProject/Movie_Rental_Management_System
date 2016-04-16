@@ -23,14 +23,14 @@
 <div id="Options">
 	<table>
 		<tr>			
-			<td align="center"><a href="./index.php">Home</a></td>
+			<td><a href="./index.php">Home</a></td>
 		<tr>
 		<tr>		
-			<td align="center"><a href="">Account</a></td>
+			<td><a href="">Account</a></td>
 		</tr>
 		<tr>
 			
-			<td align="center"><a href="./transaction.php">Transaction</a></td>
+			<td><a href="./transaction.php">Transaction</a></td>
 		</tr>
 	</table>
 </div>
