@@ -30,17 +30,26 @@
 								<td>Rental Date</td>
 								<td>Reture Date</td>
 								<td>Cost (&euro;)</td>
+								<td></td>
 							</tr>
 							<?php
 								if($transactions != null) {
 									foreach($transactions as $transaction) {
+										$movie = $this->model->getMoviesByMovieID($transaction->getMovieID());
 							?>
 									<tr>
 										<td><?= $transaction->getTransactionID() ?></td>
-										<td><?= $transaction->getMovieID() ?></td>
+										<td><?= $movie->getTitle() ?></td>
 										<td><?= $transaction->getRentalDate() ?></td>
 										<td><?= $transaction->getReturnDate() ?></td>
 										<td><?= $transaction->getCost() ?></td>
+										<td>
+											<form method="POST" action="play.php">
+												<input type="submit" value="Play"  />
+												<input type="hidden" name="title" value="<?= $movie->getTitle() ?>" />
+												<input type="hidden" name="url" value="<?= $movie->getURL() ?>" />
+											</form>
+										</td>
 									</tr>
 							<?php
 									}
