@@ -137,5 +137,9 @@
 		public function getTransactionsByUserID($user_id) {
 			return $this->transaction_dao->getTransactionsByUserID($user_id);
 		}
+		
+		public function getMoviesByMovieID($id) {
+			return $this->movie_dao->getMoviesByMovieID($id);
+		}
 	}
 ?>

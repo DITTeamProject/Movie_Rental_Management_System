@@ -18,6 +18,7 @@
 		 * get the Customer with the user name provided
 		 * 
 		 * @param string $username
+		 * 	   or null if user not exist
 		 */
 		public function getCustomerByUserName($username) {
 			$this->db_manager->openConnection();									//open database connection
@@ -26,8 +27,12 @@
 						
 			$result = $this->db_manager->query($sql);								//execuate query sql statement
 			
-			if(DB::isError()) {
+			if(DB::isError($result)) {
 				die($result->getMessage());											//check error
+			}
+						
+			if($result->numRows() == 0) {
+				return NULL;
 			}
 			
 			if($result->fetchInto($row)) {

@@ -101,8 +101,7 @@ input.Side_Bar_Button {
 	position: fixed;
 	float: left;
 	height: 98%;
-	width: 79%;	
-	margin-left: 20%;
+	width: 100%;
 	overflow: auto;
 }
 

@@ -68,5 +68,9 @@
 		public function getHTMLOutputInTransaction() {			
 			include('View/Transaction/transaction_html_template.php');
 		}
+		
+		public function getHTMLOutputInPlay() {
+			include("View/Play/play_html_template.php");
+		}
 	}
 ?>

@@ -45,7 +45,8 @@
 						</div>
 						<div class=RentB>			
 							<form method="POST" action="">
-								<input class="Button" type="submit" value="Rent" />
+								<input class="Button" type="submit" value="Rent" onclick="return confirm('Are you sure to rent?')" />
+								
 								<input type="hidden" name="action" value="rent" />
 								<input type="hidden" name="cost" value="<?= $movie->getPrice() ?>" />
 								<input type="hidden" name="movie_id" value="<?= $movie->getId() ?>" />
@@ -114,6 +115,6 @@
 <?php
 	//if user didn't login
 	} else {
-		header('Location: ./login.php');								/* redirect to login page */
+		header('Location: ./login.php?error=3');								/* redirect to login page */
 	}
 ?>

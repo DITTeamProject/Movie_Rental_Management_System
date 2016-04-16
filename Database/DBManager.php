@@ -1,5 +1,5 @@
 <?php
-	include_once('DB.php');
+	require_once('DB.php');
 	
 	/**
 	 * DBManager

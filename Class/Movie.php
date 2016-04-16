@@ -6,6 +6,7 @@
 		private $price = null;
 		private $cover = null;
 		private $duration = null;
+		private $url = null;
 		
 		/**
 		 * 
@@ -18,13 +19,14 @@
 		 * @param string $cover
 		 * @param string $duration
 		 */
-		public function __construct($id, $title, $genre, $price, $cover, $duration) {
+		public function __construct($id, $title, $genre, $price, $cover, $duration, $url) {
 			$this->id = $id;
 			$this->title = $title;
 			$this->genre = $genre;
 			$this->price = $price;
 			$this->cover = $cover;
 			$this->duration = $duration;
+			$this->url = $url;
 		}
 
 		/**
@@ -91,6 +93,17 @@
 		 */
 		public function setDuration($duration) {
 			$this->duration = $duration;
+		}
+		
+		/**
+		 * 
+		 * setURL()
+		 * 
+		 * 
+		 * @param string $url
+		 */
+		public function setURL($url) {
+			$this->url = $url;
 		}
 
 		/**
@@ -162,6 +175,17 @@
 		 */
 		public function getDuration() {
 			return $this->duration;
+		}
+		
+		/**
+		 * 
+		 * getURL()
+		 * 
+		 * 
+		 * @return string
+		 */
+		public function getURL() {
+			return $this->url;
 		}
 	}
 ?>

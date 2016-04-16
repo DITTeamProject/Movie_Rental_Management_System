@@ -28,7 +28,7 @@
 		 * @return array $this->movies array of movie object with all movie records.
 		 */
 		public function getAllMovies() {
-			unset($this->movies);																		/*Clear movies array.*/
+			$this->movies = array();
 			
 			$this->db_manager->openConnection();														/*Connect database.*/
 			
@@ -49,8 +49,10 @@
 				  * row[4]: Movie Cover Path
 				  * 
 				  * row[5]: Movie Duration
+				  * 
+				  * row[6]: Movie URL
 				  */
-				$this->movies[] = new Movie($row[0], $row[1], $row[2], sprintf("%.2f", $row[3]), $row[4], $row[5]);
+				$this->movies[] = new Movie($row[0], $row[1], $row[2], sprintf("%.2f", $row[3]), $row[4], $row[5], $row[6]);
 			}
 			
 			$this->db_manager->closeConnection();														/*Close connection to database.*/
@@ -68,7 +70,7 @@
 		 */
 		
 		public function getMoviesByTitle($title) {
-			unset($this->movies);																		/*Clear movies array*/
+			$this->movies = array();																	/*Clear movies array*/
 			
 			$this->db_manager->openConnection();														/*Open Connection.*/
 			
@@ -81,12 +83,33 @@
  			}
  			
 			while($result->fetchInto($row)) {															/*Fetch movie into movies.*/
-				$this->movies[] = new Movie($row[0], $row[1], $row[2], $row[3], $row[4], $row[5]);
+				$this->movies[] = new Movie($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6]);
 			}
 				
 			$this->db_manager->closeConnection();														/*Close connection.*/
 				
 			return $this->movies;
+		}
+		
+		public function getMoviesByMovieID($id) {
+			
+			$this->db_manager->openConnection();														/*Open Connection.*/
+				
+			$sql = "select * from Movie where Movie_ID = $id";										/*Construct SQL statement.*/
+		
+			$result = $this->db_manager->query($sql);													/*Execute SQL statement.*/
+				
+			if(DB::isError($result)) {
+				die($result->getMessage());
+			}
+		
+			if($result->fetchInto($row)) {															/*Fetch movie into movies.*/
+				$movie = new Movie($row[0], $row[1], $row[2], $row[3], $row[4], $row[5], $row[6]);
+			}
+		
+			$this->db_manager->closeConnection();														/*Close connection.*/
+		
+			return $movie;
 		}
 		
 		/**

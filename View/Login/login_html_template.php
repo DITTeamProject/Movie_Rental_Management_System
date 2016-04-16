@@ -4,6 +4,24 @@
 		<link rel="stylesheet" type="text/css" href="Style/login_style.css">
 	</head>
 	<body>
+		<?php
+			if(isset($_REQUEST['error'])) {
+				$error = $_REQUEST['error'];
+				
+				if($error == '1') {
+		?>
+			<font color="red">Wrong Username, Please try again.</font>
+		<?php 
+				} else if($error == '2') {
+		?>
+			<font color="red">Wrong Passwrod, Please try again.</font>
+		<?php
+				} else if($error == '3') {
+		?>
+			<font color="red">Please login first.</font>
+		<?php		}
+			}
+		?>
 		<div class="Block_Top"></div>
 		
 		<div class="Login">
