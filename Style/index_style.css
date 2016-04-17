@@ -218,6 +218,7 @@ div.Movie div.Popup {
 	height: 270px;
 	width: 580px;
 	word-wrap: break-word;
+	
 }
 
 div.Movie:hover div.Popup {

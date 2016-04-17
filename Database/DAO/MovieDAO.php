@@ -95,7 +95,7 @@
 			
 			$this->db_manager->openConnection();														/*Open Connection.*/
 				
-			$sql = "select * from Movie where Movie_ID = $id";											/*Construct SQL statement.*/
+			$sql = "select * from Movie where Movie_ID = $id";										/*Construct SQL statement.*/
 		
 			$result = $this->db_manager->query($sql);													/*Execute SQL statement.*/
 				
@@ -110,22 +110,6 @@
 			$this->db_manager->closeConnection();														/*Close connection.*/
 		
 			return $movie;
-		}
-		
-		public function insertNewMovie($title, $genre, $price, $cover, $duration, $url) {
-			$this->db_manager->openConnection();														/*Open Connection.*/
-			
-			$sql = "insert into Movie (Title, Genre, Price, Cover, Duration, URL) values ('$title', '$genre', '$price', '$cover', '$duration', '$url')";
-			
-			echo $sql;
-			
-			$result = $this->db_manager->query($sql);													/*Execute SQL statement.*/
-				
-			if(DB::isError($result)) {
-				die($result->getMessage());
-			}
-						
-			$this->db_manager->closeConnection();														/*Close connection.*/		
 		}
 		
 		/**
