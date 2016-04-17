@@ -72,5 +72,13 @@
 		public function getHTMLOutputInPlay() {
 			include("View/Play/play_html_template.php");
 		}
+		
+		public function getHTMLOutputInAdministratorLogin() {
+			include("View/AdministratorLogin/administrator_login_html_template.php");
+		}
+		
+		public function getHTMLOutputInInserNewMovie() {
+			include("View/InsertNewMovie/insert_new_movie_html_template.php");
+		}
 	}
 ?>
