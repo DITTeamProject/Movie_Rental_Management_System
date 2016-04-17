@@ -171,6 +171,7 @@ input.Button:hover  {
 div.Info_Message {
 	/*border: 1px solid black;*/
 	float: left;
+	margin-left: 1%;
 }
 
 div.Info_Cover {
