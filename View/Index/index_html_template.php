@@ -27,6 +27,9 @@
 					<?php include("View/Index/all_movies_template.php"); ?>
 				</div>
 			</div>
+			<div>
+				<a href="administrator_login.php">Administractor?</a>
+			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     	<script src="./bigSlide.js"></script>
