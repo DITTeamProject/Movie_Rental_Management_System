@@ -3,6 +3,7 @@
 	include_once('Database/DAO/CustomerDAO.php');
 	include_once('Database/DAO/CommentDAO.php');
 	include_once('Database/DAO/TransactionDAO.php');
+	include_once('Database/DAO/AdministratorDAO.php');
 	
 	/**
 	 * Model
@@ -14,6 +15,7 @@
 		private $customer_dao = null;
 		private $comment_dao = null;
 		private $transaction_dao = null;
+		private $administrator_dao = null;
 		
 		/**
 		 * __construct
@@ -25,6 +27,7 @@
 			$this->customer_dao = new CustomerDAO();
 			$this->comment_dao = new CommentDAO();
 			$this->transaction_dao = new TransactionDAO();
+			$this->administrator_dao = new AdministratorDAO();
 		}
 		
 		/**
@@ -140,6 +143,14 @@
 		
 		public function getMoviesByMovieID($id) {
 			return $this->movie_dao->getMoviesByMovieID($id);
+		}
+		
+		public function getAdministratorByUserName($username) {
+			return $this->administrator_dao->getAdministratorByUserName($username);
+		}
+		
+		public function insertNewMovie($title, $genre, $price, $cover, $duration, $url) {
+			return $this->movie_dao->insertNewMovie($title, $genre, $price, $cover, $duration, $url);
 		}
 	}
 ?>

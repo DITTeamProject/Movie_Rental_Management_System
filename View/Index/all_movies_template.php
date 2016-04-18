@@ -17,18 +17,17 @@
 				<div class="Info_Message">
 					<table>
 						<tr>
-									<td><b><font size="4px"><?= $movie->getTitle() ?></font></b></td>
-								</tr>
-								<tr>
-									<td><i><?= $movie->getGenre() ?></i></td>
-								</tr>
-								
-								<tr>
-									<td><?= $movie->getDuration() ?></td>
-								</tr>
-								<tr>
-									<td><br><b>&euro;<?= $movie->getPrice() ?></b></td>
-								</tr>
+							<td><b><font size="5px"><?= $movie->getTitle() ?></font></b></td>
+						</tr>
+						<tr>
+							<td><?= $movie->getGenre() ?></td>
+						</tr>
+						<tr>
+							<td>&euro;<?= $movie->getPrice() ?></td>
+						</tr>
+						<tr>
+							<td><?= $movie->getDuration() ?></td>
+						</tr>
 					</table>
 				</div>
 			</div>	

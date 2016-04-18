@@ -65,21 +65,12 @@
 			}
 		}
 		
-
-		public function getHTMLOutputInAccount(){
-			include("View/Account/account_html_template.php");
-		}
-		
 		public function getHTMLOutputInTransaction() {			
 			include('View/Transaction/transaction_html_template.php');
 		}
 		
 		public function getHTMLOutputInPlay() {
 			include("View/Play/play_html_template.php");
-		}
-		
-		public function getHTMLOutputInHelp(){
-			include("View/Help/help_html_template.php");
 		}
 		
 		public function getHTMLOutputInAdministratorLogin() {
@@ -89,6 +80,5 @@
 		public function getHTMLOutputInInserNewMovie() {
 			include("View/InsertNewMovie/insert_new_movie_html_template.php");
 		}
-			
 	}
 ?>

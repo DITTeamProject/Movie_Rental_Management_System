@@ -26,9 +26,9 @@
 				<div id="Movies">
 					<?php include("View/Index/all_movies_template.php"); ?>
 				</div>
-				<div>
-				<a href="administrator_login.php">Administrator?</a>
-				</div>
+			</div>
+			<div>
+				<a href="administrator_login.php">Administractor?</a>
 			</div>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

@@ -23,13 +23,19 @@
 					$this->customerLogout();
 					break;
 				case 'signup':
-					$this->CustomerSignUp();
+					$this->customerSignUp();
 					break;
 				case 'comment':
-					$this->CustomerComment();
+					$this->customerComment();
 					break;
 				case 'rent':
-					$this->CustomerRent();
+					$this->customerRent();
+					break;
+				case 'administrator_login':
+					$this->administratorLogin();
+					break;
+				case 'insert_new_movie':
+					$this->administratorInsertNewMovie();
 					break;
 				default:
 					break;
@@ -79,7 +85,7 @@
 		 * 
 		 * 
 		 */
-		public function CustomerSignUp() {
+		public function customerSignUp() {
 			/* get user input */
 			$username = $_REQUEST['username'];
 			$password = $_REQUEST['password'];
@@ -109,7 +115,7 @@
 		 * 
 		 * 
 		 */
-		public function CustomerComment() {
+		public function customerComment() {
 			$star = $_REQUEST['star'];
 			$content = $_REQUEST['content'];
 			$movie_id = $_REQUEST['movie_id'];
@@ -130,7 +136,7 @@
 		 * 
 		 * 
 		 */
-		public function CustomerRent() {
+		public function customerRent() {
 			//print_r($_REQUEST);
 			$movie_id = $_REQUEST['movie_id'];
 			$customer_id = $_REQUEST['customer_id'];
@@ -157,8 +163,110 @@
 			/* sent the mail to user block end */
 			
 			echo "<script type='text/javascript'>alert('rent successfully!')</script>";			/* Remind user that rent sucessfully */
-			
 		}
 		
+		/**
+		 * 
+		 * administratorLogin()
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
+		public function administratorLogin() {
+			$username = $_POST['username'];														/* get username that user input */
+							
+			$password = $_POST['password'];														/* get password that user input */
+			
+			print_r($_POST);
+			
+			$administrator = $this->model->getAdministratorByUserName($username);				/* get the object according the username from database */
+				
+			if($administrator != NULL) {														/* if user exist in database */
+				//login successful
+				if($administrator->getPassword() == $password) {
+					session_start();
+					$_SESSION['administrator'] = $customer;
+					header('Location: ./insert_new_movie.php');
+					//login fault
+				} else {																		/* password is wrong */
+					header('Location: ./administrator_login.php?error=2');
+				}
+			} else {
+				header('Location: ./administrator_login.php?error=1');							/* if user exist in database */
+			}
+		}
+		
+		/**
+		 * 
+		 * administratorInsertNewMovie()
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 */
+		public function administratorInsertNewMovie() {
+			$title = $_POST['title'];
+			$genre = $_POST['genre'];
+			$price = $_POST['price'];
+			$duration = $_POST['duration'];
+			$url = $_POST['url'];
+			
+			$cover = str_replace(" ", "_", $title . '.jpg');
+						
+			/* file upload feature block begins */			
+			$target_dir = "Cover/";
+			//$target_file = $target_dir . basename($_FILES["cover"]["name"]);
+			$target_file = $target_dir . $cover;
+			$uploadOk = 1;
+			$imageFileType = pathinfo($target_file, PATHINFO_EXTENSION);
+			// Check if image file is a actual image or fake image
+	
+			$check = getimagesize($_FILES["cover"]["tmp_name"]);
+			
+			if($check !== false) {
+				echo "File is an image - " . $check["mime"] . ".";
+				$uploadOk = 1;
+			} else {
+				echo "File is not an image.";
+				$uploadOk = 0;
+			}
+				
+			// Check if file already exists
+			if (file_exists($target_file)) {
+				echo "Sorry, file already exists.";
+				$uploadOk = 0;
+			}
+			// Check file size
+			if ($_FILES["cover"]["size"] > 500000) {
+				echo "Sorry, your file is too large.";
+				$uploadOk = 0;
+			}
+			// Allow certain file formats
+			if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg" && $imageFileType != "gif" ) {
+				echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+				$uploadOk = 0;
+			}
+					// Check if $uploadOk is set to 0 by an error
+			if ($uploadOk == 0) {
+				echo "Sorry, your file was not uploaded.";
+				// if everything is ok, try to upload file
+			} else {
+				if (move_uploaded_file($_FILES["cover"]["tmp_name"], $target_file)) {
+					//echo "The file ". basename( $_FILES["cover"]["name"]). " has been uploaded.";
+					$this->model->insertNewMovie($title, $genre, $price, $cover, $duration, $url);
+					
+					echo "<script type='text/javascript'>alert('insert sucessfully')</script>";
+				} else {
+					//echo "Sorry, there was an error uploading your file.";
+					echo "<script type='text/javascript'>alert('insert not sucessfully')</script>";
+				}
+			}
+			/* upload file feature block ends */
+		}
 	}
 ?>

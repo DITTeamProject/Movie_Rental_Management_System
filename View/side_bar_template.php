@@ -25,14 +25,11 @@
 		<tr>
 		<tr>
 		
-			<td ><a href="./account.php">Account</a></td>
+			<td ><a href="">Account</a></td>
 		</tr>
 		<tr>
 			
 			<td ><a href="./transaction.php">Transaction</a></td>
-		</tr>
-		<tr>			
-			<td align="center"><a href="./help.php">Help</a></td>
 		</tr>
 	</table>
 </div>
