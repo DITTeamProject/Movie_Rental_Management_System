@@ -1,0 +1,190 @@
+body {
+	width: 80%;
+}
+
+div#Main {
+	/*border: 1px solid black;*/
+	width: 100%;	
+	margin: 0;
+	overflow: hidden;
+}
+div#SideBar {
+	/*border: 1px solid black;*/
+	width: 20%;
+	height: 100%;
+	float: left;
+	background-color: #538cc6;
+	margin: 0;
+	padding: 0;
+}
+
+div#Content {
+	/*border: 1px solid black;*/
+
+	float: left;
+	padding: 10px;
+}
+
+
+div.Greeting {
+	/*border: 1px solid red;*/
+	color: white;
+	align: right;
+}
+
+div.Greeting table{
+
+	width: 100%;
+	text-align: center;
+	padding: 10px;
+}
+div.Greeting td{
+
+	text-align: center;
+}
+
+
+div#Options table {
+	/*border: 1px solid black;*/
+	padding-top: 80px;
+	width: 100%;
+	align: left;
+}
+
+
+
+div#Options td {
+	padding: 15px;
+	font-size: 150%;
+	font-weight: bold;
+	font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+	text-align: center;
+}
+	
+div#Options a:link {
+	color: white;
+	text-decoration: none;
+}
+
+div#Options a:hover {
+	color : #4ED50D!important;
+	text-decoration : none; 
+}
+
+div#Options a:visited{
+	color : white;
+	text-decoration : none;
+}
+
+a:link {
+	color: #538cc6;
+	text-decoration: none;
+}
+
+a:hover {
+	color : #4ED50D!important;
+	text-decoration : none; 
+}
+
+a:visited{
+	color : #538cc6;
+	text-decoration : none;
+}
+
+input.Side_Bar_Button {
+	background-color: white;
+	color: blue;
+	width: wrap-content;
+	height: 30px;
+	border-radius: 5px;
+	margin: 20px;
+	float: left;
+}
+
+
+.Text_H{
+	position: relative;
+	float: left;
+	margin-left: 7%;
+	margin-top: 2%;
+}
+
+.Head {
+	font-size: 45px;
+	color: #538cc6;
+	font-weight: bold;
+}
+
+.Title {
+	padding-left: 30px;
+	font-size: 30px;
+	color: black;
+	font-weight: bold;
+}
+
+.Text_ {
+	padding-left: 45px;
+	font-size: 20px;
+	color: black;
+	
+}
+
+
+
+
+/*  
+    Recommeded CSS
+    ==============
+*/
+
+.panel {
+    position: fixed;
+    left: -15.625em; /*or width of your navigation panel*/
+    width: 15.625em; /*should match the above value*/
+}
+
+/*  
+    Demo Specific Styles
+    ====================
+*/
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #101820;
+    line-height: 1.5;
+}
+
+.wrap {
+    position: relative;
+}
+
+.panel {
+    background: #538cc6;
+    z-index: 5;
+    text-align: center;
+    align: center;
+}
+
+
+.panel a {
+    color: #fff;
+}
+
+input.Play_B{
+	
+    border : none !important;
+    background-color:#538cc6;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;     
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;          	
+}
+
+input.Play_B:hover  {
+	border : none !important;
+    background-color: #4ED50D;
+}
+}
