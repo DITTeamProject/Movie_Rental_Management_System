@@ -21,7 +21,6 @@
 		<?php		}
 			}
 		?>
-		
 		<form method="POST" action="administrator_login.php">
 			<table>
 				<tr>

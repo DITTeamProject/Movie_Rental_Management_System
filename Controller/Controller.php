@@ -189,7 +189,7 @@
 				//login successful
 				if($administrator->getPassword() == $password) {
 					session_start();
-					$_SESSION['administrator'] = $customer;
+					$_SESSION['administrator'] = $administrator;
 					header('Location: ./insert_new_movie.php');
 					//login fault
 				} else {																		/* password is wrong */
