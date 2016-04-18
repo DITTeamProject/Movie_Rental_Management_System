@@ -1,3 +1,7 @@
+body {
+	overflow-x: hidden;
+}
+
 div#Main {
 	/*border: 1px solid black;*/
 	height: 100%;
@@ -86,14 +90,16 @@ div.Greeting td{
 }
 
 
-div#Options table{
-	widht: 100%;
-	heigth: 100%;
+div#Options table {
+	/*border: 1px solid black;*/
+	padding-top: 80px;
+	width: 100%;
+	align: center;
 }
 
 
 div#Options td {
-	text-align: left;
+	text-align: center;
 	padding: 15px;
 	font-size: 150%;
 	font-weight: bold;
@@ -165,6 +171,7 @@ input.Button:hover  {
 div.Info_Message {
 	/*border: 1px solid black;*/
 	float: left;
+	margin-left: 1%;
 }
 
 div.Info_Cover {
@@ -180,6 +187,11 @@ div#Movies {
 	display: inline-block;
 	width: 100%;
 	/*border-top: 1px solid #538cc6*/
+	
+}
+
+div#Movie table td{
+	border: 1px solid black;
 }
 
 div.Movie {
@@ -188,7 +200,11 @@ div.Movie {
 	height: 250px;
 	padding-top: 30px;
 	float: left;
-	
+	border: 1px solid white;
+}
+
+div.Movie:hover {
+	border: 1px solid #4ED50D;
 }
 
 div.Movie div.Popup {
@@ -246,8 +262,12 @@ body {
 }
 
 .panel {
-    background: #101820;
+    background: #538cc6;
+    z-index: 5;
+    text-align: center;
+    align: center;
 }
+
 
 .panel a {
     color: #fff;

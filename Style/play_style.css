@@ -1,0 +1,27 @@
+.BackB{
+	position: relative;
+	bottom: 0;
+	margin-bottom: 5%;
+	z-index: 1;
+}
+
+input.Button2 {
+	border: 1px solid #bfbfbf;
+    background-color:white;
+    color: #bfbfbf;
+    width: 100px;
+    height: 35px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;     
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+     	
+}
+
+input.Button2:hover {
+    background-color: #e6e6e6;
+}
+
+.movie {
+	align: center;
+}

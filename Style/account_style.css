@@ -1,3 +1,7 @@
+body {
+	width: 80%;
+}
+
 div#Main {
 	/*border: 1px solid black;*/
 	width: 100%;	
@@ -97,31 +101,34 @@ input.Side_Bar_Button {
 	float: left;
 }
 
-.Transactions{
+.Text_Acc{
 	position: relative;
 	float: left;
-	height: 98%;
-	width: 100%;
-	overflow: auto;
-	margin-left: 30px;
+	margin-left: 10%;
+	margin-top: 2%;
 }
 
-div.Transaction_Table table{
-	padding: 10px;
-	width: 100%;
-	margin-bottom: 5px;
+.Head {
+	font-size: 40px;
+	color: #538cc6;
+	font-weight: bold;
 }
 
-div.Transaction_Table tr{
-	text-align: center;
-	width: 80%;
-	border: 1px solid #7ca8d3;
+.Title {
+	padding-left: 30px;
+	font-size: 25px;
+	color: black;
+	font-weight: bold;
+}
+
+.Text_ {
+	padding-left: 45px;
+	font-size: 20px;
+	color: black;
 	
 }
 
-div.Transaction_Table td{
 
-}
 
 
 /*  
