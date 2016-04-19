@@ -38,11 +38,13 @@
 			<td align="center"><a href="./index.php">Home</a></td>
 		<tr>
 		<tr>		
-			<td align="center"><a href="">Account</a></td>
+			<td align="center"><a href="./account.php">Account</a></td>
 		</tr>
 		<tr>
-			
 			<td align="center"><a href="./transaction.php">Transaction</a></td>
+		</tr>
+		<tr>
+			<td align="center"><a href="./help.php">Help</a></td>
 		</tr>
 	</table>
 </div>
