@@ -22,11 +22,13 @@
 						<tr>
 							<td><?= $movie->getGenre() ?></td>
 						</tr>
-						<tr>
-							<td>&euro;<?= $movie->getPrice() ?></td>
-						</tr>
+
 						<tr>
 							<td><?= $movie->getDuration() ?></td>
+						</tr>
+						
+						<tr>
+							<td><br><b>&euro;<?= $movie->getPrice() ?></b></td>
 						</tr>
 					</table>
 				</div>
